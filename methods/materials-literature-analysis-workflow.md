@@ -1,383 +1,385 @@
-# Materials-literature analysis workflow
+# 材料文献分析方法工作流
 
-This guide explains how to read materials-science papers by reconstructing the authors' design logic rather than memorizing experiments.
+本指南说明如何通过重建作者的设计逻辑来阅读材料科学论文，而不是单纯记住一堆实验。
 
-## 1. Start from the bottleneck
+## 1. 从瓶颈开始
 
-Every good materials paper begins with a mismatch:
-
-```text
-Desired property  ≠  existing material behavior
-```
-
-Ask:
-
-- What cannot be done now?
-- Why does the current material fail?
-- Which property is limiting performance?
-- Is the bottleneck thermodynamic, kinetic, structural, biological, or process-related?
-
-Example from the PCCM paper:
+好的材料论文通常从一个失配开始：
 
 ```text
-Desired: high loading of many hydrophobic drugs
-Existing: polymer micelles often load <10% drug
-Cause: hydrophobic, compact, low-polarity cores have poor compatibility with many drugs
+期望性质  ≠  现有材料行为
 ```
 
-## 2. Define the target material state
+要问：
 
-Before discussing monomers, ask what state the guest should occupy.
+- 现在做不到什么？
+- 现有材料为什么失败？
+- 哪个性质限制了性能？
+- 瓶颈是热力学、动力学、结构、生物，还是工艺问题？
 
-Possible states include:
+以 PCCM 论文为例：
 
-| State | Use case | Requirement |
+```text
+期望：高载药并兼容多种疏水药
+现状：传统聚合物胶束载药量常低于 10%
+原因：疏水、致密、低极性核对很多药物兼容性差
+```
+
+## 2. 定义目标材料状态
+
+讨论单体之前，先问客体应该处于什么状态。
+
+可能状态包括：
+
+| 状态 | 适用场景 | 要求 |
 |---|---|---|
-| Molecularly dissolved | Small hydrophobic molecules | Strong solvent-like compatibility |
-| Amorphous nanoaggregate | Highly crystalline or poorly compatible drugs | Stabilize aggregate surface |
-| Ion pair | Charged drugs | Electrostatic complementarity |
-| Covalent conjugate | Prodrug strategy | Linker stability and release |
-| Confined phase | Catalysts, sensors | Controlled interface |
-| Phase-separated domain | Block copolymers, membranes | Controlled domain size |
+| 分子级溶解 | 小分子疏水药 | 强溶剂化兼容性 |
+| 无定形纳米聚集体 | 高结晶或难兼容药物 | 稳定聚集体表面 |
+| 离子对 | 带电药物 | 静电互补 |
+| 共价偶联物 | 前药策略 | 连接键稳定且可释放 |
+| 限域相 | 催化剂、传感器 | 可控界面 |
+| 相分离结构域 | 嵌段聚合物、膜材料 | 可控结构域尺寸 |
 
-In the PCCM paper, the target state is not perfectly molecular dissolution. It is:
-
-```text
-amorphous drug nanoaggregate + hydrated sulfoxide-rich interface
-```
-
-This is a major conceptual inversion.
-
-## 3. Translate the target state into chemistry
-
-Ask:
-
-- Which functional group provides the needed interaction?
-- Is it polar, charged, hydrophobic, acidic, basic, donor, or acceptor?
-- Is the interaction static or dynamic?
-- Can the material rearrange?
-- Is the group compatible with water, solvent, cells, heat, or pH?
-
-The PCCM example uses:
+在 PCCM 论文中，目标状态不是严格的分子级分散，而是：
 
 ```text
-sulfoxide S=O
-  → strong hydrogen-bond acceptor
-  → high polarity
-  → water hydration
-  → bridge to drug surface
+无定形药物纳米聚集体 + 水化亚砜界面
 ```
 
-But the design must be balanced:
+这是一个重要的概念反转。
 
-| Design variable | Too weak | Balanced | Too strong |
+## 3. 把目标状态翻译成化学设计
+
+要问：
+
+- 哪个官能团提供所需相互作用？
+- 它是极性、带电、疏水、酸性、碱性、氢键给体还是受体？
+- 相互作用是静态还是动态？
+- 材料能否重排？
+- 该官能团是否兼容水、溶剂、细胞、热或 pH？
+
+PCCM 使用的是：
+
+```text
+亚砜 S=O
+  → 强氢键受体
+  → 高极性
+  → 能结合水
+  → 能桥接药物表面
+```
+
+但化学设计必须平衡：
+
+| 设计变量 | 太弱 | 平衡 | 太强 |
 |---|---|---|---|
-| Hydrogen bonding | poor stabilization | dynamic stabilization | excessive immobilization |
-| Polarity | poor compatibility | broad compatibility | possible carrier self-association |
-| Hydrophobicity | no assembly/drug partitioning | controlled phase separation | aggregation/crystallization |
-| Molecular weight | unstable particles | stable nanocarrier | slow diffusion or poor clearance |
+| 氢键 | 稳定不足 | 动态稳定 | 过度固定 |
+| 极性 | 兼容性差 | 广谱兼容 | 载体可能自聚集 |
+| 疏水性 | 不自组装、不富集药物 | 可控相分离 | 聚集或结晶 |
+| 分子量 | 粒子不稳定 | 稳定纳米载体 | 扩散慢或清除难 |
 
-## 4. Reconstruct synthesis logic
+## 4. 重建合成逻辑
 
-A synthesis choice usually answers one of these questions:
+合成选择通常回答以下问题：
 
-1. **How do I install the key functional group?**
-2. **How do I control molecular weight and architecture?**
-3. **How do I create self-assembly?**
-4. **How do I stabilize the final material?**
-5. **How do I make controls?**
+1. **如何安装关键官能团？**
+2. **如何控制分子量和架构？**
+3. **如何产生自组装？**
+4. **如何稳定最终材料？**
+5. **如何制备对照？**
 
-For PEG-PBuSEA:
+对 PEG-PBuSEA 来说：
 
 ```text
-sulfoxide monomer
-  → RAFT polymerization
-  → PBuSEA functional block
-  → PEG macro-initiator / macro-chain-transfer agent
-  → PEG-b-PBuSEA block copolymer
-  → self-assembly in water
-  → PEG shell + coacervate core
+含亚砜单体
+  → RAFT 聚合
+  → PBuSEA 功能嵌段
+  → PEG 大分子引发剂 / 链转移剂
+  → PEG-b-PBuSEA 嵌段聚合物
+  → 水中自组装
+  → PEG 壳 + 凝聚体核
 ```
 
-Ask why:
+要追问：
 
-- Why RAFT? Controlled molecular weight and block architecture.
-- Why PEG? Colloidal stability and biocompatibility.
-- Why PBuSEA? Sulfoxide gives polarity and hydrogen-bond accepting capacity.
-- Why butyl side chain? Gives enough hydrophobicity and flexibility for LCST-type phase separation.
-- Why block copolymer? Separates core formation from shell stabilization.
+- 为什么用 RAFT？因为分子量和嵌段架构可控。
+- 为什么用 PEG？因为提供胶体稳定性和生物相容性。
+- 为什么用 PBuSEA？因为亚砜提供极性和氢键受体能力。
+- 为什么用丁基侧链？因为提供足够的疏水性和柔性，支持 LCST 型相分离。
+- 为什么用嵌段聚合物？因为把核形成和壳稳定分开。
 
-## 5. Reconstruct property logic
+## 5. 重建性质逻辑
 
-A material property can often be decomposed as:
+材料性质通常可以拆成：
 
 ```text
-property =
-  molecular interactions
-  + chain architecture
-  + phase state
-  + interface
-  + processing history
-  + guest compatibility
+性质 =
+  分子相互作用
+  + 链架构
+  + 相态
+  + 界面
+  + 加工历史
+  + 客体兼容性
 ```
 
-Important physical quantities:
+重要物理量：
 
-| Quantity | Question |
+| 物理量 | 要问的问题 |
 |---|---|
-| Polarity | Can the core solvate the guest? |
-| Viscosity | Is the core rigid or liquid-like? |
-| Glass transition | Is the chain mobile? |
-| Hydrogen-bond density | Is the guest stabilized? |
-| Phase separation | Does the material form functional domains? |
-| Particle size | Is it usable for delivery or processing? |
-| Interfacial energy | Will aggregates grow or remain stabilized? |
-| Crystallinity | Will the guest crystallize? |
+| 极性 | 核能否溶剂化客体？ |
+| 黏度 | 核是刚性还是液态？ |
+| 玻璃化转变温度 | 链段是否可运动？ |
+| 氢键密度 | 客体是否被稳定？ |
+| 相分离 | 材料是否形成功能结构域？ |
+| 粒径 | 是否适合递送或加工？ |
+| 界面能 | 聚集体会长大的趋势大，还是被稳定？ |
+| 结晶度 | 客体是否结晶？ |
 
-The PCCM core is unusual because it is:
+PCCM 核的特殊之处在于它是：
 
 ```text
-hydrated + polar + low-viscosity + liquid-like + nanoscale
+水化 + 极性 + 低黏度 + 液态 + 纳米尺度
 ```
 
-not simply hydrophobic and compact.
+而不是单纯疏水、致密的塑料状核。
 
-## 6. Build the characterization logic
+## 6. 搭建表征逻辑
 
-Never list instruments without hypotheses. For each experiment ask:
+不要罗列仪器。每个实验都要对应一个假设。要问：
 
-1. What question does it answer?
-2. What is the expected result?
-3. What alternative explanation is excluded?
-4. What would happen if it were removed?
+1. 它回答什么问题？
+2. 预期结果是什么？
+3. 它排除了哪些替代解释？
+4. 如果删掉它，证据链会缺什么？
 
-### Structure confirmation
+### 结构确认
 
-| Experiment | Proves |
+| 实验 | 证明内容 |
 |---|---|
-| NMR | Functional group and polymer composition |
-| GPC/SEC | Molecular weight and dispersity |
-| FTIR | Functional group and hydrogen-bond shifts |
-| MS | Small-molecule identity |
+| 核磁 NMR | 官能团、聚合物组成 |
+| GPC/SEC | 分子量和分散性 |
+| 红外 FTIR | 官能团和氢键位移 |
+| 质谱 MS | 小分子身份 |
 
-### Phase state
+### 相态
 
-| Experiment | Proves |
+| 实验 | 证明内容 |
 |---|---|
-| Turbidity/cloud point | Temperature-induced phase separation |
-| Optical microscopy | Droplet or aggregate formation |
-| FRAP | Internal molecular mobility |
-| DLS | Nanoscale assembly |
-| TEM/cryo-TEM | Morphology |
-| DSC | Glass transition or crystallization |
+| 浊度/云点 | 温度诱导相分离 |
+| 光学显微镜 | 液滴或聚集物形成 |
+| FRAP | 内部分子运动性 |
+| DLS | 纳米组装 |
+| TEM/cryo-TEM | 形貌 |
+| DSC | 玻璃化转变或结晶 |
 
-### Microenvironment
+### 微环境
 
-| Experiment | Proves |
+| 实验 | 证明内容 |
 |---|---|
-| Polarity-sensitive probe | Local dielectric environment |
-| Viscosity-sensitive probe | Local mobility |
-| Variable-temperature NMR | Core hydration and motion |
-| Partition coefficient | Selective guest uptake |
+| 极性敏感探针 | 局部介电环境 |
+| 黏度敏感探针 | 局部运动性 |
+| 变温 NMR | 核水化和分子运动 |
+| 分配系数 | 选择性客体摄取 |
 
-### Mechanism
+### 机制
 
-| Experiment | Proves |
+| 实验 | 证明内容 |
 |---|---|
-| XRD/electron diffraction | Amorphous versus crystalline state |
-| NOESY | Spatial proximity |
-| MD simulation | Molecular aggregation and hydrogen bonds |
-| Salt/urea perturbation | Role of water |
-| FTIR shift | Changed hydrogen-bond environment |
-| Matched molecular derivatives | Structure-property causality |
+| XRD/电子衍射 | 无定形还是结晶态 |
+| NOESY | 空间邻近性 |
+| 分子动力学 MD | 分子聚集和氢键 |
+| 盐/尿素扰动 | 水的作用 |
+| 红外位移 | 氢键环境改变 |
+| 匹配分子衍生物 | 结构-性质因果性 |
 
-## 7. Build the evidence chain
+## 7. 搭建证据链
 
-A strong paper usually follows this chain:
+强论文通常遵循：
 
 ```text
-Identity
-  → phase behavior
-  → microenvironment
-  → function
-  → mechanism
-  → generality
-  → application
-  → safety
+身份确认
+  → 相行为
+  → 微环境
+  → 功能
+  → 机制
+  → 普适性
+  → 应用
+  → 安全性
 ```
 
-For the PCCM paper:
+对 PCCM 论文：
 
 ```text
-PBuSEA forms LCST coacervates
-  → droplets are liquid and polar
-  → hydrophobic molecules partition into them
-  → PEG-b-PBuSEA forms stable nanoscale PCCMs
-  → PCCMs retain coacervate-like cores
-  → PCCMs load many hydrophobic drugs
-  → drugs form amorphous nanoaggregates
-  → sulfoxide-water-drug hydrogen bonds stabilize aggregates
-  → high loading improves in vivo delivery
+PBuSEA 形成 LCST 凝聚体
+  → 液滴呈液态且极性高
+  → 疏水分子富集进入液滴
+  → PEG-b-PBuSEA 形成稳定纳米 PCCM
+  → PCCM 保留凝聚体样核
+  → PCCM 高效装载多种疏水药
+  → 药物形成无定形纳米聚集体
+  → 亚砜—水—药物氢键稳定聚集体
+  → 高载药改善体内递送
 ```
 
-## 8. Identify controls and falsification criteria
+## 8. 找出对照和证伪标准
 
-Ask what would have disproven the idea.
+要问：什么结果能推翻这个想法？
 
-For PCCMs:
+对 PCCM：
 
-- If sulfide and sulfone controls loaded drugs as well as sulfoxide, S=O would not be key.
-- If cryo-TEM/XRD showed perfect molecular dispersion, the nanoaggregate mechanism would fail.
-- If salt-induced dehydration did not reduce loading, the hydration mechanism would weaken.
-- If drugs lacking N-containing groups loaded equally well, the nitrogen-hydrogen-bond rule would fail.
-- If high loading did not improve tumor drug exposure, the application claim would weaken.
+- 如果硫醚和砜对照也能像亚砜一样高效载药，那么 S=O 就不是关键。
+- 如果 cryo-TEM/XRD 显示药物完全分子分散，纳米聚集机制就会失败。
+- 如果盐诱导脱水不降低载药，水化机制会减弱。
+- 如果缺少含 N 基团的药物也同等高效载药，氮-氢键规则就不成立。
+- 如果高载药没有提高肿瘤药物暴露，应用主张会减弱。
 
-## 9. Extract transferable rules
+## 9. 提取可迁移规则
 
-Useful abstract rules from the example:
+从这个例子可以抽象出：
 
-1. **Do not optimize only hydrophobicity; optimize interfacial solvation.**
-2. **A guest aggregate can be useful if its surface is stabilized.**
-3. **Dynamic interactions are often better than static locking.**
-4. **A shell can stabilize what a bulk phase cannot.**
-5. **Functional groups should be strong enough to bind but weak enough to release.**
-6. **Structure-property rules should be validated with matched derivatives.**
-7. **High loading must be coupled to stability, release, safety, and processability.**
+1. **不要只优化疏水性；要优化界面溶剂化。**
+2. **客体聚集体并非必然有害；如果表面被稳定，它可以成为功能状态。**
+3. **动态相互作用往往优于静态锁死。**
+4. **壳层可以稳定体相无法稳定的东西。**
+5. **官能团要足够强以结合，但不能强到无法释放。**
+6. **结构-性质规则要用匹配衍生物验证。**
+7. **高载药必须同时联系稳定性、释放、安全性和可制造性。**
 
-## 10. Develop a new material
+## 10. 开发新材料
 
-Use this workflow:
+使用以下流程：
 
 ```text
-1. Define target property and failure mode.
-2. Define desired guest state.
-3. Choose interaction type.
-4. Choose functional groups.
-5. Choose backbone and architecture.
-6. Build a small design library.
-7. Screen phase behavior and microenvironment.
-8. Screen function.
-9. Characterize structure and mechanism.
-10. Optimize stability and processing.
-11. Test application.
-12. Evaluate limitations and safety.
+1. 定义目标性质和失败模式。
+2. 定义期望客体状态。
+3. 选择相互作用类型。
+4. 选择官能团。
+5. 选择骨架和架构。
+6. 建立小型设计库。
+7. 筛选相行为和微环境。
+8. 筛选功能。
+9. 表征结构和机制。
+10. 优化稳定性和加工性。
+11. 测试应用。
+12. 评估局限和安全性。
 ```
 
-### Design-library variables
+### 设计库变量
 
-| Variable | Examples |
+| 变量 | 示例 |
 |---|---|
-| Functional group | S=O, amide, lactam, N-oxide, phosphine oxide, carboxylate, pyridine |
-| Side-chain length | Ethyl, butyl, hexyl, dodecyl |
-| Oxidation state | sulfide/sulfoxide/sulfone |
-| Backbone flexibility | acrylate, methacrylate, carbonate, polyester |
-| Architecture | homopolymer, diblock, random, graft, star, crosslinked |
-| Shell | PEG, zwitterion, polysarcosine, charge-shielding layer |
-| Crosslinking | none, core-crosslinked, shell-crosslinked, dynamic |
-| Processing | film hydration, nanoprecipitation, microfluidics, spray drying, lyophilization |
+| 官能团 | S=O、酰胺、内酰胺、N-氧化物、磷酰基、羧酸根、吡啶 |
+| 侧链长度 | 乙基、丁基、己基、十二烷基 |
+| 氧化态 | 硫醚/亚砜/砜 |
+| 骨架柔性 | 丙烯酸酯、甲基丙烯酸酯、碳酸酯、聚酯 |
+| 架构 | 均聚物、二嵌段、无规、接枝、星形、交联 |
+| 外壳 | PEG、两性离子、聚肌氨酸、电荷屏蔽层 |
+| 交联 | 无、核交联、壳交联、动态交联 |
+| 加工 | 薄膜水化、纳米沉淀、微流控、喷雾干燥、冻干 |
 
-### Screening measurements
+### 筛选表征
 
-Early-stage:
+早期阶段：
 
 ```text
-solubility
-cloud point
-turbidity
-microscopy
+溶解度
+浊点
+浊度
+显微镜
 FRAP
-polarity probe
-viscosity probe
-partition coefficient
+极性探针
+黏度探针
+分配系数
 ```
 
-Nanomaterial-stage:
+纳米材料阶段：
 
 ```text
 DLS
 PDI
-zeta potential
+Zeta 电位
 TEM/cryo-TEM
 CMC
-serum stability
-freeze-drying stability
-release kinetics
+血清稳定性
+冻干复溶稳定性
+释放动力学
 ```
 
-Mechanism-stage:
+机制阶段：
 
 ```text
 XRD
 NOESY
 FTIR
-solid-state NMR
-MD simulation
-salt perturbation
-matched derivatives
+固态 NMR
+MD 模拟
+盐扰动
+匹配衍生物
 ```
 
-Application-stage:
+应用阶段：
 
 ```text
-cell uptake
-cytotoxicity
-target activity
-blood compatibility
-pharmacokinetics
-biodistribution
-efficacy
-safety histology
+细胞摄取
+细胞毒性
+血清蛋白吸附
+血液相容性
+释放
+靶细胞药效
+药代动力学
+生物分布
+疗效
+组织安全性
 ```
 
-## 11. Reporting template
+## 11. 论文总结模板
 
-When summarizing a materials paper, use this outline:
+总结材料论文时，可以用这个结构：
 
 ```markdown
-# Paper summary
+# 论文总结
 
-## 1. One-sentence conclusion
+## 1. 一句话结论
 ...
 
-## 2. Problem and bottleneck
+## 2. 问题与瓶颈
 ...
 
-## 3. Target material state
+## 3. 目标材料状态
 ...
 
-## 4. Chemical design
+## 4. 化学设计
 ...
 
-## 5. Synthesis logic
+## 5. 合成逻辑
 ...
 
-## 6. Key properties
+## 6. 关键性质
 ...
 
-## 7. Characterization logic
+## 7. 表征逻辑
 ...
 
-## 8. Mechanism
+## 8. 机制
 ...
 
-## 9. Application
+## 9. 应用
 ...
 
-## 10. Transferable methodology
+## 10. 可迁移方法论
 ...
 
-## 11. Limitations
+## 11. 局限性
 ...
 ```
 
-## 12. Common reading mistakes
+## 12. 常见阅读误区
 
-| Mistake | Correction |
+| 误区 | 纠正 |
 |---|---|
-| Treating characterization as unrelated data | Map every experiment to a hypothesis |
-| Assuming high polarity is always good | Balance solvation, assembly, release, and stability |
-| Assuming molecular dispersion is always best | Amorphous nanoaggregates can improve loading |
-| Ignoring controls | Controls define causal structure |
-| Focusing only on performance | Also examine stability, toxicity, scalability |
-| Treating simulation as proof | MD supports mechanism but needs experiments |
-| Confusing loading with delivery | High LC must translate into target exposure and efficacy |
+| 把表征当成互不相关的数据 | 把每个实验映射到假设 |
+| 认为极性越高越好 | 要平衡溶剂化、组装、释放和稳定性 |
+| 认为分子分散一定最好 | 无定形纳米聚集体可能提高载药 |
+| 忽视对照 | 对照决定因果关系 |
+| 只看性能 | 还要看稳定性、毒性和可放大性 |
+| 把模拟当证明 | MD 支持机制，但仍需实验 |
+| 混淆载药与递送 | 高载药必须转化为靶部位暴露和疗效 |
