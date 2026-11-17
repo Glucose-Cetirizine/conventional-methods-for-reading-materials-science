@@ -1,22 +1,22 @@
-# Figures
+# 图片说明
 
-These are unmodified page images containing the eight main figures from:
+这些图片是以下论文八张主图的未修改整页图版：
 
 > Wang, J., Ying, J., Huang, J. *et al.* **Bridging hydrogen-bond-stabilized polymeric coacervate core micelles for high-efficiency drug encapsulation and delivery.** *Nature Communications* (2026). DOI: [10.1038/s41467-026-72978-5](https://doi.org/10.1038/s41467-026-72978-5)
 
-| File | Original article figure | Content |
+| 文件 | 原文图号 | 内容 |
 |---|---|---|
-| [figure-01-overview.png](figure-01-overview.png) | Fig. 1 | PCCM concept, Mix-and-Go loading, and comparison with ordinary polymer micelles |
-| [figure-02-coacervation.png](figure-02-coacervation.png) | Fig. 2 | PBuSEA LCST coacervation, liquid droplet behavior, polarity, viscosity, and partitioning |
-| [figure-03-pccm-formation.png](figure-03-pccm-formation.png) | Fig. 3 | PEG-PBuSEA self-assembly and coacervate-like micelle core |
-| [figure-04-loading-performance.png](figure-04-loading-performance.png) | Fig. 4 | Loading content, controls, lyophilization, broad drug screen, and Mix-and-Go |
-| [figure-05-drug-aggregates.png](figure-05-drug-aggregates.png) | Fig. 5 | Internal drug aggregates, amorphous state, DiI aggregation, and MD simulation |
-| [figure-06-structure-property.png](figure-06-structure-property.png) | Fig. 6 | Drug descriptors, nitrogen-containing structures, and derivative validation |
-| [figure-07-bridging-hydrogen-bonds.png](figure-07-bridging-hydrogen-bonds.png) | Fig. 7 | Sulfoxide-water-drug bridging hydrogen-bond mechanism |
-| [figure-08-in-vivo.png](figure-08-in-vivo.png) | Fig. 8 | In vivo antitumor efficacy, high-dose MZ-1, and co-delivery |
+| [figure-01-overview.png](figure-01-overview.png) | Fig. 1 | PCCM 概念、Mix-and-Go 载药，以及与普通聚合物胶束的比较 |
+| [figure-02-coacervation.png](figure-02-coacervation.png) | Fig. 2 | PBuSEA 的 LCST 凝聚、液滴行为、极性、黏度和分配 |
+| [figure-03-pccm-formation.png](figure-03-pccm-formation.png) | Fig. 3 | PEG-PBuSEA 自组装和凝聚体样胶束核 |
+| [figure-04-loading-performance.png](figure-04-loading-performance.png) | Fig. 4 | 载药量、对照、冻干稳定性、广谱药物筛选和 Mix-and-Go |
+| [figure-05-drug-aggregates.png](figure-05-drug-aggregates.png) | Fig. 5 | 内部药物聚集体、无定形态、DiI 聚集证据和 MD 模拟 |
+| [figure-06-structure-property.png](figure-06-structure-property.png) | Fig. 6 | 药物描述符、含氮结构和衍生物验证 |
+| [figure-07-bridging-hydrogen-bonds.png](figure-07-bridging-hydrogen-bonds.png) | Fig. 7 | 亚砜-水-药物桥连氢键机制 |
+| [figure-08-in-vivo.png](figure-08-in-vivo.png) | Fig. 8 | 体内抗肿瘤效果、高剂量 MZ-1 和联合递送 |
 
-For detailed interpretation, see [`../case-study/pccm-paper-analysis.md`](../case-study/pccm-paper-analysis.md).
+详细解读见 [`../case-study/pccm-paper-analysis.md`](../case-study/pccm-paper-analysis.md)。
 
-## License note
+## 许可说明
 
-The figure images are from the original article and remain under the article license, **CC BY-NC-ND 4.0**. They are shared here as unmodified page images with attribution. See [`../NOTICE.md`](../NOTICE.md).
+图片来自原论文，仍遵循原文章许可 **CC BY-NC-ND 4.0**。本仓库以未修改整页图片形式加入并注明来源。详见 [`../NOTICE.md`](../NOTICE.md)。
