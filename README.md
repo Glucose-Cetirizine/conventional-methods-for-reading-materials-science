@@ -1,7 +1,38 @@
 # 材料文献常规分析方法
 
 > 英文仓库名：**Conventional methods for reading materials science**  
+> 中文备注：**材料文献常规分析方法**  
 > 一套面向材料科学论文阅读的可复用工作流：从科研问题、材料设计、合成逻辑、表征逻辑，到机制验证、迁移方法与局限性分析。
+
+## 快速开始：核心提示词
+
+下面这段可直接复制使用。把“附件论文”替换为你的目标文献即可。
+
+```text
+请按以下标准阅读这篇材料科学论文：
+
+1. 用大白话理清这篇文章讲了一个什么科研故事：解决了什么科研问题，如何解决的。
+2. 解释文中所有专业词汇和技术词汇。
+3. 总结创新点。
+4. 突出文章的矛盾点、困难点、困境和冲突，说明作者用什么样的思维方法、方法论和思考框架去解决。
+5. 把每一张主图都解释得清清楚楚。
+6. 给出你的阅读思路。
+7. 讲得细一点，目标是把小白变成大佬。
+8. 提炼思维方法、迁移方法、底层方法论，并判断论文还有没有未解决的问题。
+```
+
+如果重点分析材料合成、性质设计、表征实验和机制，可以在上面追加：
+
+```text
+请额外补充：
+
+9. 材料为什么这样设计？为什么选择这个单体、官能团、氧化态、侧链、骨架、嵌段结构和分子量？
+10. 材料合成和性质背后的底层逻辑是什么？有哪些规律？如何迁移到其他体系？
+11. 为什么要做这些表征实验或其他实验？作者是按照什么逻辑思考和推进的？
+12. 如何用同一套逻辑开发新材料？
+```
+
+完整提示词库见：[`prompts/prompt-bank.md`](prompts/prompt-bank.md)。
 
 ![仓库封面](figures/figure-01-overview.png)
 
@@ -136,7 +167,7 @@
 
 ## 可复用提示词库
 
-见 [`prompts/prompt-bank.md`](prompts/prompt-bank.md)，包括以下提示词模板：
+完整版提示词模板见 [`prompts/prompt-bank.md`](prompts/prompt-bank.md)，包括以下主题：
 
 - 全文深度精读；
 - 科研故事提取；
@@ -150,7 +181,7 @@
 
 ## 通用方法论指南
 
-见 [`methods/materials-literature-analysis-workflow.md`](methods/materials-literature-analysis-workflow.md)，内容包括：
+完整方法说明见 [`methods/materials-literature-analysis-workflow.md`](methods/materials-literature-analysis-workflow.md)，内容包括：
 
 - 如何判断材料为什么被选中；
 - 如何连接单体、官能团和宏观性质；
