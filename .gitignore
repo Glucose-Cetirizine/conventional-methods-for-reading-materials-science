@@ -1,0 +1,7 @@
+# Do not redistribute source paper PDFs.
+*.pdf
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
