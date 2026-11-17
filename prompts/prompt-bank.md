@@ -1,261 +1,261 @@
-# Prompt bank: materials-science paper reading
+# 提示词库：材料科学论文阅读
 
-This page turns the original questions into reusable prompts. Replace the placeholders in angle brackets.
+本页把原始提问整理成可复用提示词模板。使用时，把尖括号中的占位内容替换为你的具体文献或材料体系。
 
-## 1. Whole-paper deep reading
+## 1. 全文深度精读
 
-### Prompt template
+### 提示词模板
 
 ```text
-Read the attached materials-science paper according to the following standards:
+请按以下标准阅读附件中的材料科学论文：
 
-1. Explain the scientific story in plain language: what problem was solved, why it mattered, and how the authors solved it.
-2. Explain all specialized and technical terms.
-3. Identify the main innovations.
-4. Highlight the contradictions, difficulties, bottlenecks, and conflicts. Explain the authors' thinking framework and methodology.
-5. Explain every main figure clearly.
-6. Give your own reading strategy and critical assessment.
-7. Be detailed enough to turn a beginner into an expert.
-8. Extract transferable thinking methods, bottom-level design logic, and unresolved problems.
+1. 用大白话解释这篇文章的科研故事：解决了什么问题、为什么重要、作者是怎么解决的。
+2. 解释所有专业词汇和技术词汇。
+3. 总结主要创新点。
+4. 突出矛盾点、困难点、瓶颈和冲突，并说明作者的思考框架与方法论。
+5. 解释每一张主图。
+6. 给出你的阅读思路和批判性判断。
+7. 讲解要足够细，能把小白带到接近研究者的水平。
+8. 提炼可迁移的思维方法、底层设计逻辑和尚未解决的问题。
 ```
 
-### Expected output structure
+### 期望输出结构
 
 ```text
-1. One-sentence summary
-2. Research problem and bottleneck
-3. Plain-language story
-4. Technical glossary
-5. Innovations
-6. Contradictions and design logic
-7. Figure-by-figure interpretation
-8. Mechanism chain
-9. Transferable methodology
-10. Limitations and future work
-```
-
----
-
-## 2. Material synthesis and property logic
-
-### Prompt template
-
-```text
-For the attached paper, explain the material synthesis and property-design logic.
-
-Please answer:
-
-1. Why did the authors choose this monomer, polymer, functional group, oxidation state, side chain, backbone, or block architecture?
-2. What target material state were they trying to create?
-3. Which intermolecular interactions control the key properties?
-4. Why did they use these controls and comparisons?
-5. What general design rules can be extracted?
-6. How can this logic be transferred to other materials?
-7. How could I develop a new material using the same thinking?
-```
-
-### Expected output structure
-
-```text
-1. Target property
-2. Target material state
-3. Key functional group
-4. Synthesis choice
-5. Property mechanism
-6. Control experiments
-7. Generalizable design rules
-8. New-material development workflow
+1. 一句话总结
+2. 科研问题与瓶颈
+3. 大白话故事
+4. 专业词汇表
+5. 创新点
+6. 矛盾点与设计逻辑
+7. 逐图解读
+8. 机制链条
+9. 可迁移方法论
+10. 局限性与未来工作
 ```
 
 ---
 
-## 3. Why these characterization experiments?
+## 2. 材料合成与性质逻辑
 
-### Prompt template
+### 提示词模板
 
 ```text
-For the attached paper, explain why each characterization or experiment was performed.
+请解释附件论文中材料合成和性质设计的底层逻辑。
 
-For each experiment, provide:
+请回答：
 
-1. The question it answers.
-2. The physical or chemical principle.
-3. The expected evidence if the hypothesis is correct.
-4. What competing explanation it excludes.
-5. Where it sits in the evidence chain.
-6. What would happen to the argument if this experiment were missing.
+1. 作者为什么选择这个单体、聚合物、官能团、氧化态、侧链、骨架或嵌段结构？
+2. 他们想创造什么样的目标材料状态？
+3. 哪些分子间相互作用控制关键性质？
+4. 为什么要设计这些对照和比较？
+5. 可以提取哪些通用设计规则？
+6. 这个逻辑如何迁移到其他材料？
+7. 如何用同样的思维开发新材料？
 ```
 
-### Expected output structure
+### 期望输出结构
 
 ```text
-Experiment name
-- Question:
-- Principle:
-- Key result:
-- Interpretation:
-- Alternative explanation excluded:
-- Position in evidence chain:
-```
-
----
-
-## 4. Figure-by-figure analysis
-
-### Prompt template
-
-```text
-Analyze every main figure in the attached paper.
-
-For each figure:
-
-1. State what the figure is showing.
-2. Explain each panel or major data block.
-3. Identify the experimental comparison.
-4. Explain the key result.
-5. Explain why the authors needed this figure.
-6. State what conclusion it supports.
-7. Point out possible limitations or alternative interpretations.
-```
-
-### Expected output structure
-
-```text
-Figure N
-- Purpose:
-- Panel-by-panel explanation:
-- Key comparison:
-- Main conclusion:
-- Why it matters:
-- Caveats:
+1. 目标性质
+2. 目标材料状态
+3. 关键官能团
+4. 合成选择
+5. 性质机制
+6. 对照实验
+7. 通用设计规则
+8. 新材料开发流程
 ```
 
 ---
 
-## 5. Mechanism and contradiction analysis
+## 3. 为什么做这些表征实验？
 
-### Prompt template
+### 提示词模板
 
 ```text
-Identify the core contradiction or bottleneck in this paper.
+请解释附件论文中每个表征或实验为什么必须做。
 
-Explain:
+对每个实验，请说明：
 
-1. Why the conventional approach failed.
-2. Why the problem was difficult.
-3. What trade-off the authors had to manage.
-4. How the authors turned a limitation into a useful mechanism.
-5. How they designed controls to test the mechanism.
-6. What would have falsified their hypothesis.
+1. 它回答什么问题。
+2. 背后的物理或化学原理。
+3. 如果假设正确，应该看到什么证据。
+4. 它排除了哪些竞争性解释。
+5. 它在证据链中的位置。
+6. 如果缺少这个实验，论文论证会受什么影响。
 ```
 
-### Expected output structure
+### 期望输出结构
 
 ```text
-Conventional view
-Failure mode
-Core contradiction
-Key insight
-Design solution
-Evidence chain
-Falsification criteria
-```
-
----
-
-## 6. Transferable methodology
-
-### Prompt template
-
-```text
-Extract transferable methodology from this paper.
-
-Explain how to apply the logic to other materials systems such as catalysts, batteries, membranes, coatings, sensors, protein formulation, polymer recycling, or nanoparticle delivery.
-
-For each transfer:
-
-1. State the abstract principle.
-2. Give the original system.
-3. Give a target system.
-4. Explain how to redesign the material.
-5. Define characterization experiments.
-6. Define success criteria.
-```
-
-### Expected output structure
-
-```text
-Abstract principle
-Original implementation
-Transfer target
-Redesign strategy
-Expected properties
-Required characterization
-Success criteria
+实验名称
+- 问题：
+- 原理：
+- 关键结果：
+- 解读：
+- 被排除的替代解释：
+- 在证据链中的位置：
 ```
 
 ---
 
-## 7. New-material development
+## 4. 逐图分析
 
-### Prompt template
+### 提示词模板
 
 ```text
-Using the design logic from the attached paper, propose a new material.
+请分析附件论文中的每一张主图。
 
-Please provide:
+对每张图：
 
-1. Target application and performance metrics.
-2. Desired guest state and microenvironment.
-3. Candidate functional groups.
-4. Polymer or material architecture.
-5. Synthesis route.
-6. Control materials.
-7. Characterization plan.
-8. Application test plan.
-9. Risks and go/no-go criteria.
+1. 说明这张图想展示什么。
+2. 解释每个子图或主要数据块。
+3. 指出实验对比关系。
+4. 解释关键结果。
+5. 说明作者为什么需要这张图。
+6. 说明它支持的结论。
+7. 指出可能的局限或替代解释。
 ```
 
-### Expected output structure
+### 期望输出结构
 
 ```text
-Target
-Desired state
-Chemical design
-Architecture
-Synthesis
-Controls
-Characterization
-Application testing
-Risks
+图 N
+- 目的：
+- 子图解释：
+- 关键对比：
+- 主要结论：
+- 为什么重要：
+- 注意事项：
 ```
 
 ---
 
-## 8. Review-style limitations analysis
+## 5. 机制与矛盾点分析
 
-### Prompt template
+### 提示词模板
 
 ```text
-Act as a constructive reviewer. Identify unresolved problems in the attached paper.
+请找出这篇文章的核心矛盾或瓶颈。
 
-Please cover:
+请解释：
 
-1. Scientific limitations.
-2. Mechanistic uncertainties.
-3. Characterization gaps.
-4. Stability and scalability concerns.
-5. Safety or regulatory issues.
-6. Generalization risks.
-7. Suggested follow-up experiments.
+1. 传统方法为什么失败。
+2. 问题为什么困难。
+3. 作者需要权衡哪些因素。
+4. 作者如何把某个限制转化成有用的机制。
+5. 作者如何设计对照来验证机制。
+6. 什么结果会证伪他们的假设。
 ```
 
-### Expected output structure
+### 期望输出结构
 
 ```text
-Limitation
-Why it matters
-Possible risk
-Missing evidence
-Recommended follow-up
+传统观点
+失败模式
+核心矛盾
+关键洞察
+设计解决方案
+证据链
+证伪标准
+```
+
+---
+
+## 6. 可迁移方法论
+
+### 提示词模板
+
+```text
+请从这篇论文中提取可迁移方法论。
+
+请说明如何把这套逻辑迁移到催化剂、电池、膜材料、涂层、传感器、蛋白质制剂、聚合物回收或纳米递送等其他材料体系。
+
+对每个迁移方向：
+
+1. 给出抽象原则。
+2. 给出原始体系。
+3. 给出目标体系。
+4. 说明如何重新设计材料。
+5. 定义表征实验。
+6. 定义成功标准。
+```
+
+### 期望输出结构
+
+```text
+抽象原则
+原始实现
+迁移目标
+重设计策略
+预期性质
+必要表征
+成功标准
+```
+
+---
+
+## 7. 新材料开发
+
+### 提示词模板
+
+```text
+请基于附件论文的设计逻辑，提出一个新材料方案。
+
+请提供：
+
+1. 目标应用和性能指标。
+2. 期望的客体状态和微环境。
+3. 候选官能团。
+4. 聚合物或材料架构。
+5. 合成路线。
+6. 对照材料。
+7. 表征计划。
+8. 应用测试计划。
+9. 风险和 go/no-go 标准。
+```
+
+### 期望输出结构
+
+```text
+目标
+期望状态
+化学设计
+架构
+合成
+对照
+表征
+应用测试
+风险
+```
+
+---
+
+## 8. 审稿式局限性分析
+
+### 提示词模板
+
+```text
+请作为建设性审稿人，找出附件论文中尚未解决的问题。
+
+请覆盖：
+
+1. 科学层面的局限。
+2. 机制上的不确定性。
+3. 表征缺口。
+4. 稳定性和可放大性问题。
+5. 安全或监管问题。
+6. 泛化风险。
+7. 建议的后续实验。
+```
+
+### 期望输出结构
+
+```text
+局限
+为什么重要
+可能风险
+缺失证据
+建议后续实验
 ```
